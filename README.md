@@ -44,7 +44,7 @@ PHP Console service provider config-file looks like this:
 
 See [PhpConsole\Laravel\ServiceProvider](/src/PhpConsole/Laravel/ServiceProvider.php) for detailed options description.
 
-By default it's located in `/vendor/php-console/laravel-service-provider/src/config/config.php` and it's not recommended to be edited in this path because it will be overwriten on next `composer update`. 
+By default it's located in `/vendor/php-console/laravel-service-provider/src/config/config.php` and it's not recommended to be edited in this path because it will be overwritten on next `composer update`. 
 
 If you want to edit config you need to run
 
