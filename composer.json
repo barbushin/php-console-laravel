@@ -1,0 +1,35 @@
+{
+	"name": "php-console/laravel-service-provider",
+	"description": "Service provider for integration PHP Console library with Laravel framework",
+	"keywords": ["PHP", "Laravel", "errors", "debug", "chrome", "error handler", "google chrome", "php-console"],
+	"homepage": "https://github.com/barbushin/php-console-laravel",
+	"license": "BSD 3-Clause",
+	"type": "library",
+
+	"authors": [
+		{
+			"name": "Barbushin Sergey",
+			"email": "barbushin@gmail.com",
+			"homepage": "http://linkedin.com/in/barbushin"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/barbushin/php-console-laravel/issues?state=open"
+	},
+	"require": {
+		"php": ">=5.3.0",
+		"illuminate/support": "4.1.*",
+		"php-console/php-console": ">=3.1"
+	},
+	"autoload": {
+		"psr-0": {
+			"PhpConsole\\Laravel\\": "src/"
+		}
+	},
+	"minimum-stability": "dev",
+	"extra": {
+		"branch-alias": {
+			"dev-master": "1.x-dev"
+		}
+	}
+}
