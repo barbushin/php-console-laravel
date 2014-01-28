@@ -1,6 +1,6 @@
 ## Laravel service provider for PHP Console
 
-[![Latest Stable Version](https://poser.pugx.org/php-console/laravel-service-provider/version.png)](https://packagist.org/packages/php-console/laravel-service-provider)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/barbushin/php-console-laravel/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 PHP Console allows you to handle PHP errors & exceptions, dump variables, execute PHP code remotely and many other things using [Google Chrome extension PHP Console](https://chrome.google.com/webstore/detail/php-console/nfhmhhlpfleoednkpnnnkolmclajemef) and [PhpConsole server library](https://github.com/barbushin/php-console).
 
