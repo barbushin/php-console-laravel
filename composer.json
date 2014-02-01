@@ -1,6 +1,6 @@
 {
 	"name": "php-console/laravel-service-provider",
-	"description": "Service provider for integration PHP Console library with Laravel framework",
+	"description": "Laravel service provider to handle PHP errors, dump variables, execute PHP code remotely in Google Chrome",
 	"keywords": ["PHP", "Laravel", "errors", "debug", "chrome", "error handler", "google chrome", "php-console"],
 	"homepage": "https://github.com/barbushin/php-console-laravel",
 	"license": "BSD 3-Clause",
