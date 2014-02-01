@@ -54,7 +54,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
 	 * $this->password is required to be set
 	 * use $this->ipMasks & $this->enableSslOnlyMode for additional protection
 	 */
-	public $isEvalEnabled = false;
+	protected $isEvalEnabled = false;
 
 	/**
 	 * Indicates if loading of the provider is deferred.
@@ -88,7 +88,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
 		return Config::get(static::PACKAGE_ALIAS . '::config');
 	}
 
-	public function setOption($name, $value) {
+	protected function setOption($name, $value) {
 		if(!property_exists($this, $name)) {
 			throw new \Exception('Unknown property "' . $name . '" in ' . static::PACKAGE_ALIAS . ' package config');
 		}
