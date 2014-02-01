@@ -39,7 +39,6 @@ PHP Console service provider config-file looks like this:
 		'dumperDumpSizeLimit' => 500000,
 		'dumperDetectCallbacks' => true,
 		'detectDumpTraceAndSource' => false,
-		'dataStorage' => new PhpConsole\Storage\File(storage_path('php-console.dat'), true),
 	);
 
 See [PhpConsole\Laravel\ServiceProvider](/src/PhpConsole/Laravel/ServiceProvider.php) for detailed options description.

@@ -46,7 +46,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
 	protected $dumperDetectCallbacks = true;
 	/** @var bool Autodetect and append trace data to debug */
 	protected $detectDumpTraceAndSource = false;
-	/** @var \PhpConsole\Storage Postponed response storage */
+	/** @var \PhpConsole\Storage|null Postponed response storage */
 	protected $dataStorage = false;
 
 	/**
@@ -96,6 +96,12 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
 	}
 
 	protected function initPhpConsole() {
+		if(!$this->dataStorage) {
+			$this->dataStorage = new PhpConsole\Storage\File(storage_path('php-console.dat'), true);
+		}
+		if($this->dataStorage instanceof \PhpConsole\Storage\Session) {
+			throw new \Exception('Unable to use PhpConsole\Storage\Session as PhpConsole storage interface because of problems with overridden $_SESSION handler in Laravel');
+		}
 		Connector::setPostponeStorage($this->dataStorage);
 
 		$connector = Connector::getInstance();
