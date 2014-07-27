@@ -77,7 +77,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
 	 * @return void
 	 */
 	public function boot() {
-		$this->package('php-console/php-console-laravel', static::PACKAGE_ALIAS);
+		$this->package('php-console/laravel-service-provider', static::PACKAGE_ALIAS);
 		foreach($this->getServiceProviderConfig() as $option => $value) {
 			$this->setOption($option, $value);
 		}
