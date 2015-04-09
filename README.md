@@ -8,9 +8,9 @@ This packages integrates [PHP Console server library](https://github.com/barbush
 
 Require this package in Laravel project `composer.json` and run `composer update`
 
-    "php-console/laravel-service-provider": "1.*"
+    "php-console/laravel-service-provider": "dev-laravel-5"
 
-After updating composer, add the service provider line to the begining of `providers` array in `/app/config/app.php`
+After updating composer, add the service provider line to the begining of `providers` array in `/config/app.php`
 
 	'providers' => array(
 		'PhpConsole\Laravel\ServiceProvider',
@@ -41,10 +41,10 @@ PHP Console service provider config-file looks like this:
 
 See [PhpConsole\Laravel\ServiceProvider](/src/PhpConsole/Laravel/ServiceProvider.php) for detailed options description.
 
-By default it's located in `/vendor/php-console/laravel-service-provider/src/config/config.php` and it's not recommended to be edited in this path because it will be overwritten on next `composer update`. 
+By default it's located in `/vendor/php-console/laravel-service-provider/src/config/phpconsole.php` and it's not recommended to be edited in this path because it will be overwritten on next `composer update`. 
 
 If you want to edit config you need to run
 
-    php artisan config:publish php-console/laravel-service-provider
+    php artisan vendor:publish
 
-So config-file will be moved to `/app/config/packages/php-console/laravel-service-provider/config.php` and can be edited as you want and changes will not be lost after `composer update`.
+So config-file will be moved to `/config/phpconsole.php` and can be edited as you want and changes will not be lost after `composer update`.
