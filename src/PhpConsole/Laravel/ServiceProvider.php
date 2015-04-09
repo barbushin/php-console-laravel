@@ -71,22 +71,32 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
 	public function register() {
 	}
 
+
+
 	/**
 	 * Bootstrap the application events.
 	 *
 	 * @return void
 	 */
 	public function boot() {
-		$this->package('php-console/laravel-service-provider', static::PACKAGE_ALIAS);
-		foreach($this->getServiceProviderConfig() as $option => $value) {
+    $this->publishConfiguration();
+
+		foreach(config('phpconsole') as $option => $value) {
 			$this->setOption($option, $value);
 		}
 		$this->initPhpConsole();
 	}
 
-	protected function getServiceProviderConfig() {
-		return Config::get(static::PACKAGE_ALIAS . '::config');
-	}
+  /**
+   * Publish configuration file
+   */
+  private function publishConfiguration()
+  {
+    $this->publishes([__DIR__ . '/../../config/phpconsole.php' => config_path('phpconsole.php')], 'config');
+    $this->mergeConfigFrom(__DIR__ . '/../../config/phpconsole.php', 'phpconsole');
+  }
+
+
 
 	protected function setOption($name, $value) {
 		if(!property_exists($this, $name)) {
