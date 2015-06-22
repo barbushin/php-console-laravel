@@ -1,4 +1,10 @@
-## Laravel service provider for PHP Console
+## Laravel 4.* service provider for PHP Console
+
+See https://github.com/barbushin/php-console-laravel/releases/tag/1.2.1
+
+Use `"php-console/laravel-service-provider": "1.*"` to install it using Compoer.
+
+## Laravel 5.* service provider for PHP Console
 
 PHP Console allows you to handle PHP errors & exceptions, dump variables, execute PHP code remotely and many other things using [Google Chrome extension PHP Console](https://chrome.google.com/webstore/detail/php-console/nfhmhhlpfleoednkpnnnkolmclajemef) and [PhpConsole server library](https://github.com/barbushin/php-console).
 
@@ -8,7 +14,7 @@ This packages integrates [PHP Console server library](https://github.com/barbush
 
 Require this package in Laravel project `composer.json` and run `composer update`
 
-    "php-console/laravel-service-provider": "2.*"
+    "php-console/laravel-service-provider": "5.*"
 
 After updating composer, add the service provider line to the begining of `providers` array in `/config/app.php`
 
