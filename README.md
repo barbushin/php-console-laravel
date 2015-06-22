@@ -14,12 +14,12 @@ This packages integrates [PHP Console server library](https://github.com/barbush
 
 Require this package in Laravel project `composer.json` and run `composer update`
 
-    "php-console/laravel-service-provider": "5.*"
+    "php-console/laravel-service-provider": "~5.0"
 
-After updating composer, add the service provider line to the begining of `providers` array in `/config/app.php`
+After updating composer, add the service provider line at the begining of `providers` array in `/config/app.php`
 
 	'providers' => array(
-		'PhpConsole\Laravel\ServiceProvider',
+		PhpConsole\Laravel\ServiceProvider::class,
 
 ## Edit config
 
@@ -51,6 +51,7 @@ By default it's located in `/vendor/php-console/laravel-service-provider/src/con
 
 If you want to edit config you need to run
 
-    php artisan vendor:publish --provider="php-console/laravel-service-provider" --tag=config
+    $ php artisan vendor:publish --provider="php-console/laravel-service-provider" --tag=config
+    $ php artisan vendor:publish
 
 So config-file will be moved to `/config/phpconsole.php` and can be edited as you want and changes will not be lost after `composer update`.
