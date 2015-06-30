@@ -108,7 +108,11 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
             Helper::register();
         }
 
-        if (!$this->isEnabled || !Connector::getInstance()->isActiveClient()) {
+        $isActiveClient = $connector->isActiveClient();
+        if (!$this->isEnabled || !$isActiveClient) {
+            if($isActiveClient) {
+                $connector->disable();
+            }
             return;
         }
 
